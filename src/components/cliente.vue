@@ -141,7 +141,7 @@ export default {
 
       // 192.168.10.17/api/pessoa/dia return only the today task
       // 192.168.10.17/api/pessoa return all tasks
-      axios.get(`http://taskcasa.azurewebsites.net/api/pessoa/dia`).then((res)=> {
+      axios.get(`https://taskcasa.azurewebsites.net/api/pessoa/dia`).then((res)=> {
         this.pessoas = res.data
         console.log(res.data)
         
@@ -153,7 +153,7 @@ export default {
       if(!this.validatedInputData())
         alert("Insira os dados com *")
       else {
-        axios.post(`http://taskcasa.azurewebsites.net/api/pessoa`, {
+        axios.post(`https://taskcasa.azurewebsites.net/api/pessoa`, {
           lavPrato: this.inputLavarP,
           varreC: this.inputVarreC,
           banheiro:  this.inputBanheiro,
@@ -196,7 +196,7 @@ export default {
       if (!this.validatedInputData()) {
         alert("Por favor, insira os campos com *")
       } else {
-          axios.put(`http://taskcasa.azurewebsites.net/api/pessoa`,this.pessoa).then(()=>{
+          axios.put(`https://taskcasa.azurewebsites.net/api/pessoa`,this.pessoa).then(()=>{
             this.lista()            
               // alert("ENVIADO")
         })
